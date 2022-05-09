@@ -1,1 +1,1 @@
-## Super Simple Spring Boot/Angular Web App
+## A Very Simple Spring Boot/Angular Web App
