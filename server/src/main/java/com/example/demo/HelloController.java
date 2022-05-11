@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 	@GetMapping("/")
 	public String index() {
-		return "Wow this is very cool!";
-	}
-
-	@GetMapping("/hello")
-	public String hello() {
-		return "Hello there!";
+		return "Greetings!";
 	}
 }
