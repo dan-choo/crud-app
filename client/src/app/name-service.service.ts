@@ -10,17 +10,19 @@ import { Name } from './name';
 @Injectable()
 export class NameServiceService {
 
-  private namesURL: string;
+  private baseURL: string;
 
   constructor(private http: HttpClient) {
-    this.namesURL = 'http://localhost:8080/';
+    this.baseURL = 'http://localhost:8080/';
    }
 
   public findAll(): Observable<Name[]> {
-    return this.http.get<Name[]>(this.namesURL+'names');
+    return this.http.get<Name[]>(this.baseURL+'names');
   }
 
   public save(name: Name) {
-    return this.http.post<Name[]>(this.namesURL+'name', name);
+    const headers = { 'Content-Type': 'application/json'}  
+    const body=JSON.stringify(name);
+    return this.http.post<Name>(this.baseURL+'name', body, {'headers': headers});
   }
 }
