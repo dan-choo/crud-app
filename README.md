@@ -20,8 +20,6 @@ installed. Then navigate into the `client` folder and run the commands:
 
 ````
 npm install
-ng serve
+ng serve --open
 ````
-and now the frontend server should be up and running as well!
-
-Go to `localhost:4200` and the website should show up.
+and now you should see the website fully working at `localhost:4200`!
