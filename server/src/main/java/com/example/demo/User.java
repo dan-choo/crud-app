@@ -1,12 +1,21 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String userName;
     private String userEmail;
     private String userJob;
+
+    public User () {}
 
     public User (Integer id, String userName, String userEmail, String userJob) {
         this.id = id;
