@@ -8,8 +8,9 @@ This is just a basic app built with Spring Boot and Angular 13 to teach myself t
 
 ## How To Run
 
-First, lets start up the backend server. Make sure you have Docker installed and navigate into the `server` folder and run the commands:
+First, lets start up the backend server. This server runs on `openJDK 17.0.3`. Make sure you have that, Docker, and Maven installed. Then navigate into the `server` folder and run the commands:
 ````
+mvn clean install
 docker build -t spring-boot-demo .
 docker run -p 8080:8080 spring-boot-demo
 ````
