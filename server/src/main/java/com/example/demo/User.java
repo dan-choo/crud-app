@@ -48,7 +48,7 @@ public class User {
         this.userEmail = email;
     }
 
-    public String getUserJobj() {
+    public String getUserJob() {
         return userJob;
     }
 
