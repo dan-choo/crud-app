@@ -1,0 +1,28 @@
+<div class="form">
+    <form (ngSubmit)="onSubmit(); userForm.resetForm()" #userForm="ngForm">
+        <label for="Name"> Name </label>
+        <input type="text" [(ngModel)]="user.name" name="name">
+        <label for="Email"> Email </label>
+        <input type="text" [(ngModel)]="user.email" name="email">
+        <label for="Job"> Job </label>
+        <input type="text" [(ngModel)]="user.job" name="job">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.job }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
