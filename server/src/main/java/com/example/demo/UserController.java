@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,12 +37,7 @@ public class UserController {
     }
 
     @PostMapping("/add")
-    public @ResponseBody String addUser(@RequestParam String name, @RequestParam String email,
-            @RequestParam String job) {
-        User user = new User();
-        user.setUserName(name);
-        user.setUserEmail(email);
-        user.setUserJob(job);
+    public @ResponseBody String addUser(@RequestBody User user) {
         userRepository.save(user);
         return "Saved";
     }

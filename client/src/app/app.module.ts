@@ -5,13 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NameServiceService } from './name-service.service';
-import { NamesComponent } from './names/names.component';
+import { UsersService } from './users.service';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NamesComponent,
+    UsersComponent,
   ],
   imports: [
     FormsModule,
@@ -19,7 +19,7 @@ import { NamesComponent } from './names/names.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [NameServiceService],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
